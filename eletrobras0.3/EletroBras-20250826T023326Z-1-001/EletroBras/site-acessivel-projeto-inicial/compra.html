@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Área de Compra - EletroBras</title>
+ <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Área de Compra</h2>
+        <div class="alert">
+            <strong>Atenção:</strong> Esta área é apenas um teste! Não insira dados reais de cartão.<br>
+            Se tentar inserir um cartão real, será lembrado que isto é só uma simulação.
+        </div>
+        <form id="compraForm" autocomplete="off">
+            <div class="form-group">
+            <label for="produto">Produto</label>
+            <select id="produto" name="produto" required>
+                <option value="">Selecione</option>
+                <option value="songone">SongOne</option>
+                <option value="songtab">SongTab</option>
+                <option value="tvlife">TVLife</option>
+            </select>
+            </div>
+            <script>
+               
+                const precos = {
+                    songone: () => Math.floor(Math.random() * 2000) + 1000,
+                    songtab: () => Math.floor(Math.random() * 2000) + 1000,
+                    tvlife: () => Math.floor(Math.random() * 2000) + 1000
+                };
+
+                const produtoSelect = document.getElementById('produto');
+                const valorInput = document.getElementById('valor');
+            </script>
+            <div class="form-group">
+                <label for="valor">Valor (R$)</label>
+                <input type="number" id="valor" name="valor" placeholder="Ex: 1999.99" required min="1" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="pagamento">Forma de Pagamento</label>
+                <select id="pagamento" name="pagamento" required>
+                    <option value="">Selecione</option>
+                    <option value="pix">PIX</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="alma">Vender a Alma</option>
+                    <option value="fiado">Fiado (só amanhã)</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="ouro">Pagamento em Ouro</option>
+                    <option value="escambo">Escambo (troca de galinha)</option>
+                </select>
+            </div>
+            <div class="form-group" id="cartaoFields" style="display: none;">
+                <label for="cartao">Número do Cartão</label>
+                <input type="text" id="cartao" name="cartao" maxlength="19" placeholder="0000 0000 0000 0000">
+            </div>
+           <button 
+    type="submit" 
+    class="btn btn-primary btn-lg w-100 mt-4 rounded-pill"
+    onmouseover="this.textContent = 'SIM!'" 
+    onmouseout="this.textContent = 'Finalizar Compra'"
+>Finalizar Compra</button>
+        </form>
+        <div id="mensagem" style="margin-top:18px;"></div>
+    </div>
+   <script>
+    const pagamento = document.getElementById('pagamento');
+    const cartaoFields = document.getElementById('cartaoFields');
+    const compraForm = document.getElementById('compraForm');
+    const mensagem = document.getElementById('mensagem');
+
+    pagamento.addEventListener('change', function() {
+        if (this.value === 'cartao') {
+            cartaoFields.style.display = 'block';
+        } else {
+            cartaoFields.style.display = 'none';
+        }
+    });
+
+    compraForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        mensagem.innerHTML = '';
+        if (pagamento.value === 'cartao') {
+            mensagem.innerHTML = '<div class=\"alert\"><strong>Não insira dados reais!</strong> Esta área é apenas um teste e não processa pagamentos de verdade.</div>';
+            return;
+        }
+        
+        // Crio a imagem da explosão
+        const explosion = document.createElement('div');
+        explosion.className = 'explosion';
+        document.body.appendChild(explosion);
+
+        // Exibe a mensagem de sucesso
+        mensagem.innerHTML = '<div class=\"alert\" style=\"background:#d4edda;color:#155724;border-color:#c3e6cb;\">Compra simulada com sucesso! Obrigado por participar do teste.<br><br><em>Forma de pagamento escolhida: <strong>' + pagamento.options[pagamento.selectedIndex].text + '</strong></em></div>';
+        compraForm.reset();
+        cartaoFields.style.display = 'none';
+
+        // Redireciona para a página inicial após 1.5 segundos
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 4000); // tempo em milissegundos
+    });
+</script>
+</script>
+
+</body>
+</html></div>

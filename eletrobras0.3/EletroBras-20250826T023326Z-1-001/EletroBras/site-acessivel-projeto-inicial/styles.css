@@ -1,0 +1,440 @@
+/* Fundo com gradiente Frutiger Aero */
+body {
+  background: linear-gradient(135deg, #b6eaff 0%, #e0f7fa 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* Efeito vidro nas seções */
+section.fade-in-up {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 2rem;
+  padding: 2rem 2.5rem;
+  transition: box-shadow 0.3s;
+}
+
+section.fade-in-up:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+/* Navbar vidro */
+.glassy {
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Modal vidro */
+.modal-content.glassy {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 2rem;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Botões minimalistas */
+.btn-primary, .btn-outline-primary {
+  border-radius: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+}
+
+.btn-outline-primary {
+  border: 2px solid #2193b0;
+  color: #2193b0;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: #2193b0;
+  color: #fff;
+}
+
+/* Títulos */
+h2.fw-bold {
+  color: #2193b0;
+  text-shadow: 0 2px 8px rgba(33,147,176,0.08);
+}
+
+/* Inputs vidro */
+.form-control {
+  background: rgba(255,255,255,0.6);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(33,147,176,0.15);
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.05);
+  transition: border 0.2s;
+}
+
+.form-control:focus {
+  border: 1.5px solid #2193b0;
+  background: rgba(255,255,255,0.8);
+  outline: none;
+}
+
+/* Suavizar transições */
+* {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+/* Tema escuro Frutiger Aero */
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #232a34 0%, #1a222b 100%);
+  color: #eaf6ff;
+}
+
+[data-theme="dark"] section.fade-in-up,
+[data-theme="dark"] .glassy,
+[data-theme="dark"] .modal-content.glassy {
+  background: rgba(34, 40, 49, 0.7) !important;
+  color: #eaf6ff;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] h2.fw-bold {
+  color: #6dd5ed;
+  text-shadow: 0 2px 8px rgba(109,213,237,0.12);
+}
+
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(90deg, #232a34 0%, #2193b0 100%);
+  color: #eaf6ff;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: linear-gradient(90deg, #2193b0 0%, #232a34 100%);
+}
+
+[data-theme="dark"] .btn-outline-primary {
+  border: 2px solid #6dd5ed;
+  color: #6dd5ed;
+  background: transparent;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+  background: #6dd5ed;
+  color: #232a34;
+}
+
+[data-theme="dark"] .form-control {
+  background: rgba(34,40,49,0.7);
+  color: #eaf6ff;
+  border: 1px solid #6dd5ed;
+}
+
+[data-theme="dark"] .form-control:focus {
+  background: rgba(34,40,49,0.9);
+  border: 1.5px solid #2193b0;
+  color: #fff;
+}
+:root { --a11y-scale: 1; }
+html { font-size: calc(16px * var(--a11y-scale)); }
+
+/* Alto contraste */
+.a11y-contrast, .a11y-contrast * { background: #000 !important; color: #fff !important; }
+
+/* Tema escuro (aplica cores no root/body) */
+.dark, .dark body { background: #0b1020 !important; color: #e5e7eb !important; }
+
+/* Reduzir animações */
+.a11y-reduce-motion * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+
+/* Fonte amigável à dislexia (se não tiver, usa fallback) */
+.a11y-dyslexic-font { font-family: "OpenDyslexic", "Comic Sans MS", Arial, sans-serif !important; }
+
+/* Destacar links */
+.a11y-highlight-links a { text-decoration: underline !important; outline-offset: 2px; }
+
+/* Espacamento maior */
+.a11y-roomy-text body { line-height: 1.9 !important; letter-spacing: 0.02em !important; }
+
+/* Estilo do rodapé (footer) */
+.footer {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.footer p {
+  margin-bottom: 0.5rem;
+  color: #eee;
+}
+.footer ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.footer ul li a {
+  color: #a0c4ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Botão de acessibilidade */
+#a11y-toggle {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#4f46e5;
+    color:#fff;
+    border:none;
+    z-index:10000;
+    cursor:pointer;
+    font-size:20px
+}
+    body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 32px 28px 24px 28px;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.6em;
+            margin-bottom: 18px;
+        }
+        .alert {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            border-radius: 4px;
+            padding: 12px 14px;
+            margin-bottom: 18px;
+            font-size: 1em;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #0056b3;
+        }
+        #mensagem .alert {
+            margin-top: 0;
+        }
+             body {
+            font-family: 'Frutiger Aero', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+            background: rgba(255,255,255,0.7);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            padding: 40px 32px;
+            backdrop-filter: blur(8px);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #0077b6;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #222;
+            line-height: 1.7;
+        }
+        .glass-btn {
+            display: inline-block;
+            margin: 24px 12px 0 0;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            color: #0077b6;
+            background: rgba(255,255,255,0.35);
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(6px);
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .glass-btn:hover {
+            background: rgba(0,119,182,0.15);
+            color: #023e8a;
+            box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.22);
+        }
+        /* Botões flutuantes */
+        .floating-btns {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 100;
+        }
+        .floating-btn {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.35);
+            border-radius: 50%;
+            box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(6px);
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .floating-btn:hover {
+            background: rgba(0,119,182,0.18);
+            box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.22);
+        }
+        .floating-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: #0077b6;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 8px;
+            }
+            .floating-btns {
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+
+/* Fundo com gradiente Frutiger Aero */
+body {
+  background: linear-gradient(135deg, #b6eaff 0%, #e0f7fa 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  transition: background 0.5s ease-in-out;
+  /* Código para o rodapé ficar no final */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Deixa o conteúdo principal (o main) ocupar o espaço necessário para empurrar o rodapé */
+main {
+  flex-grow: 1;
+}
+
+/* Estilo do rodapé (footer) */
+.footer {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  width: 100%;
+}
+/* Efeito de explosão (meme) */
+@keyframes explode {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+
+ /* Efeito de explosão (meme) */
+@keyframes explode {
+  0% { transform: scale(1); opacity: 1; }
+  350% { transform: scale(3); opacity: 0; }
+}
+
+.explosion {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2000px; /* Aumenta a largura para esticar */
+  height: 1000px; /* Mantém a altura para distorcer a imagem */
+  background-image: url('img/pearto.webp'); /* Substitua pelo caminho do seu arquivo local */
+  background-size: 100% 100%; /* Isso força a imagem a se esticar completamente no div */
+  animation: explode 3s ease-out forwards; /* Aumenta a duração para ser mais dramático */
+  z-index: 9999;
+}
+/* Animação para a queda do meme */
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.kasane-teto-meme {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: auto;
+  animation: fall 5s forwards;
+  z-index: 9999;
+}
